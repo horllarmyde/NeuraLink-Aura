@@ -35,17 +35,16 @@
 
 ## 🧭 System Diagram (Mermaid Visualization)
 
-```mermaid
 flowchart TD
-    EEG[EEG Headset 🧠] -->|Brainwave Data| NeuroCore[Neuro Core Chip ⚙️]
-    NeuroCore -->|Encrypted Bluetooth Stream| App[Mobile App 📱]
-    App -->|API Request| Backend[Backend (FastAPI)]
-    Backend -->|Sends Signals| AI[AI/ML Engine 🤖]
-    AI -->|Emotion Vectors| DB[(PostgreSQL DB 🗄️)]
-    AI -->|Insights| App
-    App -->|Shared Output| User[Connected User 💫]
-    subgraph Cloud ☁️
-        Backend
-        AI
-        DB
+EEG["EEG Headset 🧠"] -->|Brainwave Data| NeuroCore["Neuro Core Chip ⚙️"]
+NeuroCore -->|Encrypted Bluetooth Stream| App["Mobile App 📱"]
+App -->|API Request| Backend["Backend FastAPI"]
+Backend -->|Sends Signals| AI["AI/ML Engine 🤖"]
+AI -->|Emotion Vectors| DB["PostgreSQL DB 🗄️"]
+AI -->|Insights| App
+App -->|Shared Output| User["Connected User 💫"]
+subgraph Cloud ["Cloud Infrastructure ☁️"]
+Backend
+AI
+DB
     end
