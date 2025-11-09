@@ -35,8 +35,6 @@
 
 ## 🧭 System Diagram (Mermaid Visualization)
 
-## 🧭 System Architecture Diagram
-
 ```mermaid
 graph TD
   A[User Interface] --> B[Frontend Application]
@@ -47,6 +45,3 @@ graph TD
   E --> G[(Data Storage)]
   F --> H[Third-party Services]
   D --> I[Identity Provider]
-
-    end
-
